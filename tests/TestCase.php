@@ -2,9 +2,9 @@
 
 namespace Brunocfalcao\Archer\Tests;
 
+use Brunocfalcao\Archer\ArcherServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Brunocfalcao\Archer\ArcherServiceProvider;
 
 class TestCase extends Orchestra
 {

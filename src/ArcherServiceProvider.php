@@ -2,9 +2,9 @@
 
 namespace Brunocfalcao\Archer;
 
+use Brunocfalcao\Archer\Commands\ArcherCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Brunocfalcao\Archer\Commands\ArcherCommand;
 
 class ArcherServiceProvider extends PackageServiceProvider
 {
