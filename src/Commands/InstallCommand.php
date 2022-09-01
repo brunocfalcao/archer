@@ -50,23 +50,23 @@ class InstallCommand extends Command
         } else {
             $this->paragraph('!! Publishing .php-cs-fixer.dist.php ...');
             $this->call('vendor:publish', [
-            '--provider' => "Jubeki\LaravelCodeStyle\ServiceProvider",
-            '--force' => true
+                '--provider' => "Jubeki\LaravelCodeStyle\ServiceProvider",
+                '--force' => true,
             ]);
         }
 
         $data = json_decode(file_get_contents(base_path('composer.json')), true);
 
-        if (!array_key_exists('check-style', $data['scripts']) ||
-            !array_key_exists('fix-style', $data['scripts'])) {
+        if (! array_key_exists('check-style', $data['scripts']) ||
+            ! array_key_exists('fix-style', $data['scripts'])) {
             $this->paragraph('=> Changing composer.json to include "composer fix-style" and "composer check-style" commands ...');
 
-            if (!array_key_exists('check-style', $data['scripts'])) {
+            if (! array_key_exists('check-style', $data['scripts'])) {
                 $this->paragraph('!! Adding check-style key ...');
                 $data['scripts']['check-style'] = 'php-cs-fixer fix --dry-run --diff';
             }
 
-            if (!array_key_exists('fix-style', $data['scripts'])) {
+            if (! array_key_exists('fix-style', $data['scripts'])) {
                 $this->paragraph('!! Adding fix-style key ...');
                 $data['scripts']['fix-style'] = 'php-cs-fixer fix';
             }
