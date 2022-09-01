@@ -1,4 +1,10 @@
-# TODO
+## TODO
 
-- [x] This task is done #prio1
-- [ ] This task has been declined
+- [x] Command "php artisan pint"
+- [ ] Command "php artisan install:woops" (replaces ignition by filp/woops)
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
