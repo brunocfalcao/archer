@@ -6,7 +6,7 @@
 - [ ] Command "php artisan install:woops" (replaces ignition by filp/woops)
 - [ ] A scheduled configured way to clean the app cache
 - [ ] Command "php artisan archer:install"
-      - [ ] "php artisan vendor:publish --provider="Jubeki\LaravelCodeStyle\ServiceProvider"
+      - [x] "php artisan vendor:publish --provider="Jubeki\LaravelCodeStyle\ServiceProvider"
       - [ ] ...
 - [ ] ...
 

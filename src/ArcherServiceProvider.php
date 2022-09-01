@@ -2,6 +2,7 @@
 
 namespace Brunocfalcao\Archer;
 
+use Brunocfalcao\Archer\Commands\InstallCommand;
 use Brunocfalcao\Archer\Commands\PintCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -13,6 +14,7 @@ class ArcherServiceProvider extends PackageServiceProvider
         $package
             ->name('archer')
             ->hasConfigFile()
-            ->hasCommand(PintCommand::class);
+            ->hasCommand(PintCommand::class)
+            ->hasCommand(InstallCommand::class);
     }
 }

@@ -11,7 +11,7 @@ class PintCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'pint';
+    protected $signature = 'pint2';
 
     /**
      * The console command description.
