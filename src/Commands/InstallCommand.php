@@ -71,7 +71,10 @@ class InstallCommand extends Command
                 $data['scripts']['fix-style'] = 'php-cs-fixer fix';
             }
 
-            file_put_contents(base_path('composer.json'), json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+            file_put_contents(
+                base_path('composer.json'),
+                json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
+            );
 
             $this->paragraph('!! Reloading composer ...');
             $this->shell('composer dumpautoload');
