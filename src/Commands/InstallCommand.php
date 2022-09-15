@@ -38,8 +38,18 @@ class InstallCommand extends Command
 //     | | //      ((____   //   / / ((____   //        ');
 
         $this->publishCsFixer();
+        $this->publishArcherResources();
 
         return 0;
+    }
+
+    protected function publishArcherResources()
+    {
+        $this->paragraph('=> Publishing archer resources ...', true);
+        $this->call('vendor:publish', [
+            '--provider' => "Brunocfalcao\Archer\ArcherServiceProvider",
+            '--force' => true,
+        ]);
     }
 
     protected function publishCsFixer()
