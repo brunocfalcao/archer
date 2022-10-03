@@ -2,13 +2,11 @@
 
 namespace Brunocfalcao\Archer;
 
-use Illuminate\Support\ServiceProvider;
 use Brunocfalcao\Archer\Commands\InstallCommand;
 use Brunocfalcao\Archer\Commands\MakeUserCommand;
 use Brunocfalcao\Archer\Commands\PintCommand;
 use Illuminate\Support\Collection;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 final class ArcherServiceProvider extends ServiceProvider
 {
@@ -19,7 +17,7 @@ final class ArcherServiceProvider extends ServiceProvider
         $this->commands([
             InstallCommand::class,
             MakeUserCommand::class,
-            PintCommand::class
+            PintCommand::class,
         ]);
 
         $this->overrideResources();
